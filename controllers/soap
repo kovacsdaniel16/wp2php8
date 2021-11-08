@@ -1,0 +1,5 @@
+<?php
+
+phpinfo(); //soap engedélyezése, hogy szerveren és a kliensen használni tudjuk.
+
+?>
