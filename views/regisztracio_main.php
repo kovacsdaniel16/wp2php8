@@ -1,7 +1,17 @@
 <h2>Regisztráció</h2>
 <form action="<?= SITE_ROOT ?>regisztracio" method="post">
-    <label for="login">Felhasználó:</label><input type="text" name="login" id="login" required pattern="[a-zA-Z][\-\.a-zA-Z0-9_]{3}[\-\.a-zA-Z0-9_]+"><br>
-    <label for="password">Jelszó:</label><input type="password" name="password" id="password" required pattern="[\-\.a-zA-Z0-9_]{4}[\-\.a-zA-Z0-9_]+"><br>
-    <input type="submit" value="Küldés">
-</form>
+   
+
+    
+       <!-- <legend>Regisztráció</legend>-->
+        <br>
+        <label for="vezeteknev">Vezetéknév:</label><input type="text" name="vezeteknev"  required><br><br>
+        <label for="utonev">Utónév:</label><input type="text" name="utonev"  required><br><br>
+        <label for="felhasznalo">Felhasználó:</label><input type="text" name="felhasznalo"  required><br><br>
+        <label for="password">Jelszó:</label><input type="password" name="jelszo"  required><br><br>
+        <input type="submit" name="regisztracio" value="Regisztráció">
+        
+
+    </form>
+
 <h2><br><?= (isset($viewData['uzenet']) ? $viewData['uzenet'] : "") ?><br></h2>
