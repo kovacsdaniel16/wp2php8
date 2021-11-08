@@ -1,12 +1,9 @@
 <?php
 
-//alkalmaz�s gy�k�r k�nyvt�ra a szerveren
-define('SERVER_ROOT', $_SERVER['DOCUMENT_ROOT'].'/wp2php8/');
+define('SERVER_ROOT', $_SERVER['DOCUMENT_ROOT'].'/wp2php8/'); //root a szerveren
 
-//URL c�m az alkalmaz�s gy�ker�hez
-define('SITE_ROOT', 'http://localhost/wp2php8/');
+define('SITE_ROOT', 'http://localhost/wp2php8/'); //url a roothoz
 
-// a router.php vez�rl� bet�lt�se
-require_once(SERVER_ROOT . 'controllers/' . 'router.php');
+require_once(SERVER_ROOT . 'controllers/' . 'router.php'); //router.php elérése
 
 ?>
