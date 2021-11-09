@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 Class Menu {
     public static $menu = array();

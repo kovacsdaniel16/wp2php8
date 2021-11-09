@@ -1,4 +1,4 @@
-<?php
+<?php /*CSATLAKOZÁS AZ ADATBÁZISHOZ */
     define('HOST', 'localhost');
     define('DATABASE', 'web2');
     define('USER', 'root');
