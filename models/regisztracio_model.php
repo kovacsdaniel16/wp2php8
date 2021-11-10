@@ -20,7 +20,7 @@ class Regisztracio_Model
 			switch(count($felhasznalo)) {
 				case 0:
 					$retData['eredmeny'] = "ERROR";
-					$retData['uzenet'] = "Regisztració sikeres " . $vars['login'] ;
+					$retData['uzenet'] = "Sikeres regisztráció " . $vars['login'] ;
                     $sqlInsert = "insert into felhasznalok(id, csaladi_nev, utonev, bejelentkezes, jelszo, jogosultsag) values (0, :csaladinev, :utonev, :bejelentkezes, :jelszo, :jogosultsag  ) ";
                     $stmt = $connection->prepare($sqlInsert); 
                     $stmt->execute(array(':csaladinev' => $vars['csaladi_nev'], ':utonev' => $vars['utonev'],
