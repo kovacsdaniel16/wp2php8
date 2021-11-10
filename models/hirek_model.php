@@ -7,15 +7,15 @@ class Hirek_Model
 		$retData['eredmeny'] = "";
 		try {
 
-      if($_POST['uzenet'] == "")
-        {
-          $retData['eredmeny'] = "ERROR";
-		  $retData['uzenet'] = "Nincs üzenet";        
-        }
-        // Ha megkaptunk minden adatot hozzuk létre a felhasználót a táblában
-      else
-        {
-            $connection = Database::getConnection();
+            if($_POST['message'] == "")
+            {
+                $retData['eredmeny'] = "ERROR";
+		        $retData['uzenet'] = "Nincs üzenet";        
+            }
+
+            else
+            {
+                $connection = Database::getConnection();
 
 			
 					$retData['eredmeny'] = "OK";
@@ -23,11 +23,12 @@ class Hirek_Model
 
                     $sqlInsert = "insert into hirek(id, hir, felhasznalo, time) values (0, :hir, :felhasznalo, :time)";
                     $stmt = $connection->prepare($sqlInsert); 
-                    $stmt->execute(array(':hir' => $vars['uzenet'], ':felhasznalo' => $_SESSION['userlogin'],
+                    $stmt->execute(array(':hir' => $vars['message'], ':felhasznalo' => $_SESSION['userlogin'],
                     ':time' => date("Y-m-d"))); 
-					
+
+            
 			
-		}
+		    }
     }
 		catch (PDOException $e) {
 					$retData['eredmeny'] = "ERROR" ;
@@ -37,6 +38,33 @@ class Hirek_Model
 		return $retData;
   
 	}
+
+    public function get_news(){
+
+        $connection = Database::getConnection();
+         $sql="select hir, felhasznalo, time from hirek order by id desc";
+         $stmt = $connection->query($sql);
+         $felhasznalo = $stmt->fetchAll(PDO::FETCH_ASSOC);
+         $_SESSION['cnt']=count($felhasznalo);
+
+for ($i=0; $i < count($felhasznalo) ; $i++) { 
+    
+
+
+         $_SESSION['hir'.$i]=$felhasznalo[$i]['hir'];
+         $_SESSION['felhasznalo'.$i]=$felhasznalo[$i]['felhasznalo'];
+         $_SESSION['time'.$i]=$felhasznalo[$i]['time'];
+
+}
+
+
+
+         
+
+       return $felhasznalo;
+      
+
+    }
 }
 
 ?>

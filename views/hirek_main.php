@@ -1,20 +1,46 @@
 <h2><br>Hírek<br></h2>
 
-<div>
+<div class="news">
+  <fieldset>  
 
 
 
 <table>
     <tr>
-        <td><h3>Olvasó</h3></td>
         <td>
+            <fieldset>
+            <table>
+
+                <tr>
+                    <th>Feladó</th>
+                    <th>Üzenet</th>
+                    <th>Dátum</th>
+                    <?php
+
+                    for ($i=0; $i < $_SESSION['cnt'] ; $i++) { 
+                    
+                        print_r($_SESSION['hir'.$i]." ".$_SESSION['felhasznalo'.$i]." ".$_SESSION['time'.$i]); 
+                   }
+                   ?>
+                </tr>
+
+            </table>
+            </fieldset>
+        </td>
+        <td> 
+            <fieldset>
             <form action="<?= SITE_ROOT ?>hirek" method="POST">
-            <label for="uzenet">Üzenet:</label><textarea name="uzenet" id="uzenet" rows="4" cols="40"></textarea>
+            <label for="message">Üzenet:</label><textarea name="message" id="message" rows="4" cols="40"></textarea>
             <input id="kuld" type="submit" value="Küld">
             </form>
+            </fieldset>
         </td>
     </tr>
 </table>
 
-
+</fieldset>
 </div>
+
+
+
+

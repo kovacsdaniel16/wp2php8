@@ -8,6 +8,7 @@ class Hirek_Controller
         $hirekModel = new Hirek_Model;  
         
         $retData = $hirekModel->get_data($vars);
+        $getNews=$hirekModel->get_news();
 
 		if($retData['eredmeny'] == "ERROR")
 			$this->baseName = "hirek";
@@ -16,6 +17,9 @@ class Hirek_Controller
 
 		//bet�ltj�k a n�zetet
 		$view = new View_Loader($this->baseName."_main");
+
+       
+       
 	}
 }
 
