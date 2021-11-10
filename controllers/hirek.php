@@ -10,7 +10,7 @@ class Hirek_Controller
         $retData = $hirekModel->get_data($vars);
 
 		if($retData['eredmeny'] == "ERROR")
-			$this->baseName = "beleptet";
+			$this->baseName = "hirek";
 
 
 
