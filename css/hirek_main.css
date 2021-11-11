@@ -1,6 +1,6 @@
 .news
 {
-    width: 50%;
+    width: 80%;
 }
 td{
 
@@ -20,3 +20,15 @@ input[type=submit]
 {
     margin: 10px;
 }
+
+table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+  }
+  
+  
+  table.hirek{
+    table-layout: auto;
+    width: 100%;  
+  }
+  

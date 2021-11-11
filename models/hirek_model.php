@@ -17,14 +17,14 @@ class Hirek_Model
             {
                 $connection = Database::getConnection();
 
-			
-					$retData['eredmeny'] = "OK";
+					$retData['eredmeny'] = "ERROR";
 					$retData['uzenet'] = "Sikeres küldés"; //. $vars['login'] ;
 
                     $sqlInsert = "insert into hirek(id, hir, felhasznalo, time) values (0, :hir, :felhasznalo, :time)";
                     $stmt = $connection->prepare($sqlInsert); 
                     $stmt->execute(array(':hir' => $vars['message'], ':felhasznalo' => $_SESSION['userlogin'],
-                    ':time' => date("Y-m-d"))); 
+                    ':time' => date('Y-m-d H:i:s'))); 
+                    
 
             
 			
@@ -43,11 +43,11 @@ class Hirek_Model
 
         $connection = Database::getConnection();
          $sql="select hir, felhasznalo, time from hirek order by id desc";
-         $stmt = $connection->query($sql);
-         $felhasznalo = $stmt->fetchAll(PDO::FETCH_ASSOC);
+         $query = $connection->query($sql);
+         $felhasznalo = $query->fetchAll(PDO::FETCH_ASSOC);
          $_SESSION['cnt']=count($felhasznalo);
 
-for ($i=0; $i < count($felhasznalo) ; $i++) { 
+            for ($i=0; $i < count($felhasznalo) ; $i++) { 
     
 
 
@@ -55,7 +55,7 @@ for ($i=0; $i < count($felhasznalo) ; $i++) {
          $_SESSION['felhasznalo'.$i]=$felhasznalo[$i]['felhasznalo'];
          $_SESSION['time'.$i]=$felhasznalo[$i]['time'];
 
-}
+        }
 
 
 

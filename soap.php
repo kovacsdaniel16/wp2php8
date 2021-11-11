@@ -1,6 +1,6 @@
 <?php
 
-phpinfo();
+
 
 $objClient = new SoapClient("http://www.mnb.hu/arfolyamok.asmx?WSDL", array('trace' => true));
 $currrates = $objClient->GetExchangeRates(array('startDate' => "2021-10-01", 'endDate' => "2021-10-31", 'currencyNames' => "EUR,USD,CHF"))->GetExchangeRatesResult;

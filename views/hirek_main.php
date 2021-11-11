@@ -3,15 +3,21 @@
 <div class="news">
   <fieldset>  
 
-
-
-<table>
-    <tr>
-        <td>
-            <fieldset>
-            <table>
+    <table>
+            <td>
+            
+            <table class="hirek">
+                <tr> 
+                    
+                    <form name="hirek" action="<?= SITE_ROOT ?>hirek" method="POST">
+                    <label for="message">Üzenet:</label><textarea name="message" id="message" rows="4" cols="40"></textarea>
+                    <input id="kuld" type="submit" value="Küld">
+                    </form>
+                    
+                </tr>
 
                 <tr>
+                               
                     <th>Feladó</th>
                     <th>Üzenet</th>
                     <th>Dátum</th>
@@ -19,23 +25,16 @@
 
                     for ($i=0; $i < $_SESSION['cnt'] ; $i++) { 
                     
-                        print_r($_SESSION['hir'.$i]." ".$_SESSION['felhasznalo'.$i]." ".$_SESSION['time'.$i]); 
+                        print_r("<tr><td>".$_SESSION['felhasznalo'.$i]."</td><td>".$_SESSION['hir'.$i]."</td><td>".$_SESSION['time'.$i]."</td>")."</tr>"; 
                    }
                    ?>
                 </tr>
 
             </table>
-            </fieldset>
+            
         </td>
-        <td> 
-            <fieldset>
-            <form action="<?= SITE_ROOT ?>hirek" method="POST">
-            <label for="message">Üzenet:</label><textarea name="message" id="message" rows="4" cols="40"></textarea>
-            <input id="kuld" type="submit" value="Küld">
-            </form>
-            </fieldset>
-        </td>
-    </tr>
+        
+    
 </table>
 
 </fieldset>

@@ -8,7 +8,7 @@
     </head>
     <body>
         <header>
-            <div id="user"><em><?= $_SESSION['userlastname']." ".$_SESSION['userfirstname']." ".$_SESSION['userlogin'] ?></em></div>
+            <div id="user"><em><?= $_SESSION['userlastname']." ".$_SESSION['userfirstname']." (".$_SESSION['userlogin'].")" ?></em></div>
             <h1 class="header">Web-programozás II - MVC alkalmazás</h1>
         </header>
         <nav>
