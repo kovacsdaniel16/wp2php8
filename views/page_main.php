@@ -9,13 +9,13 @@
     <body>
         <header>
             <div id="user"><em><?= $_SESSION['userlastname']." ".$_SESSION['userfirstname']." (".$_SESSION['userlogin'].")" ?></em></div>
-            <h1 class="header">Web-programozás II - MVC alkalmazás</h1>
+            <h1 class="header">&nbsp;&nbsp;&nbsp;&nbsp;Magyarországi szélerőművek</h1>
         </header>
         <nav>
             <?php echo Menu::getMenu($viewData['selectedItems']); ?>
         </nav>
         <aside>
-                <p>Phasellus wisi nulla...</p>
+                
         </aside>
         <section>
             <?php if($viewData['render']) include($viewData['render']); ?>
