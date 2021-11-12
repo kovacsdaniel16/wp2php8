@@ -1,7 +1,7 @@
 header, footer {
     padding: 0.5em; 
     color: white;
-    background-color: gray;
+    background-color: #8A0A8A;
     clear: left;
 }
 h1.header {
@@ -19,7 +19,7 @@ aside {
 }
 section {
     margin-left: 190px;
-    border-left: 1px solid gray;
+    border-left: 1px solid lightblue;
     padding: 1em;
 }
 ul {
@@ -28,19 +28,19 @@ ul {
     padding:0;
     margin:0;
     list-style-type:none;
-    background-color: lightblue;
+    background-color: lightgray;
 }        
 a {
     float:left;
     width:6em; /* Fix szélességű gombok érhetők el. Érdemes azonban vigyázni ezzel a módszerrel, mert ha a szöveg nem fér ki, a dizájn szétesik. */
     text-decoration:none; /* Ne legyen aláhúzva a link. */
     color:white;
-    background-color:navy;
+    background-color:#8A0A8A;
     padding:0.2em 0.6em;
     border-right:1px solid white;
 }
 a.selected{
-    background-color: blue;
+    background-color: #D050D0;
 }
-a:hover { background-color:#ff3300} /* Az egérkurzorra színváltással reagál a menüpont. */
+a:hover { background-color:purple} /* Az egérkurzorra színváltással reagál a menüpont. */
 li { display:inline } /* Ez a sor oldja meg, hogy a menüpontok egymás mellé kerüljenek. */
