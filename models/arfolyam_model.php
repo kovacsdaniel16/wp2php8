@@ -13,7 +13,7 @@ public function get_data($vars)
             $lastdate  = $vars['lastdate'];
             $penznemparok = $vars['foreigncurr2'] . "," . $vars['foreigncurr1'];
 
-            $param = array('startDate' => $firstdate, 'endDate' => $lastdate, 'currencyNames' => $penznemparok);
+            $param = array('firstDate' => $firstdate, 'lastDate' => $lastdate, 'currencyNames' => $penznemparok);
             $result = $client->__soapCall('GetExchangeRates', array('parameters' => $param));
             $xml = new SimpleXMLElement($result->GetExchangeRatesResult);
 
