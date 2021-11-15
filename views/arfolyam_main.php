@@ -11,7 +11,7 @@
 <div><h2>Napi és havi árfolyamok:</h2></div>
 <div><h3>Deviza választások</h3></div>
 
-<form name="lekerdezes" action="arfolyam_model.php" method="POST">
+<form name="lekerdezes" action="<?= SITE_ROOT ?>arfolyam" method="POST">
     <div><h5>Amiről át szeretnénk váltani (1 egységet betöltő pénznem)</h5></div>
     <select name="foreigncurr1" id="foreigncurr1" class="form-select" required>
         <?php

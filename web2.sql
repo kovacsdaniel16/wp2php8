@@ -90,7 +90,7 @@ INSERT INTO `menu` (`url`, `nev`, `szulo`, `jogosultsag`, `sorrend`) VALUES
 ('hirek', 'Hírek', '', '011', 30),
 ('kilepes', 'Kilépés', '', '011', 70),
 ('nyitolap', 'Nyitólap', '', '111', 10),
-('szeleromuvek', 'Szélerőművek', '', '111', 20);
+('arfolyam', 'Árfolyam', '', '111', 20);
 
 --
 -- Indexek a kiírt táblákhoz
