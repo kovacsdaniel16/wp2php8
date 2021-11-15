@@ -9,7 +9,7 @@ class Arfolyam_Controller
 
 	{
 
-		$arfolyammodel=new Arfolyam_Model;
+	
 
 		$view = new View_Loader($this->baseName."_main");
 	}
